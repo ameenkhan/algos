@@ -4,14 +4,14 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Objects;
 
-public class isUnique {
+public class IsUnique {
     /**
      * Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional
      * data structures
      */
 
     public static void main(String[] args) {
-        isUnique testClass = new isUnique();
+        IsUnique testClass = new IsUnique();
 
         System.out.println(testClass.isUnique(""));
         System.out.println(testClass.isUnique("abc"));
