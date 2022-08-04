@@ -58,27 +58,27 @@ public class URLify {
     private void urlifyInPlace(char[] str, int trueLen) {
        int spaces = 0;
 
-       for (char c : str) {
-           if (c == ' ') {
+       for (int i = 0; i < trueLen; i++) {
+           if (str[i] == ' ') {
                spaces++;
            }
        }
 
-       int index = trueLen + (spaces * 2);
+       int rightToLeftIndex = trueLen + (spaces * 2);
 
-//       if (trueLen < str.length) {
-//           str[trueLen] = '\0';
-//       }
+       if (trueLen < str.length) {
+           str[trueLen] = '\0';
+       }
 
         for (int i = (trueLen - 1); i >= 0; i--) {
             if (str[i] == ' ') {
-                str[index - 1] = '%';
-                str[index - 2] = '2';
-                str[index - 3] = '0';
-                index = index - 3;
+                str[rightToLeftIndex - 1] = '%';
+                str[rightToLeftIndex - 2] = '0';
+                str[rightToLeftIndex - 3] = '2';
+                rightToLeftIndex = rightToLeftIndex - 3;
             } else {
-                str[index - 1] = str[i];
-                index--;
+                str[rightToLeftIndex - 1] = str[i];
+                rightToLeftIndex--;
             }
         }
 
