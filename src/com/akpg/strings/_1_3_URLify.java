@@ -11,10 +11,10 @@ package com.akpg.strings;
  * input - "Mr John Smith   "
  * output - "Mr%20John%20Smith"
  */
-public class URLify {
+public class _1_3_URLify {
 
     public static void main(String[] args) {
-        URLify testClass = new URLify();
+        _1_3_URLify testClass = new _1_3_URLify();
         String testStr = "Mr John Smith    ";
 
         System.out.println(testClass.urlify(testStr));

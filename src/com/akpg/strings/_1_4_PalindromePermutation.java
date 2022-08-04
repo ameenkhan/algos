@@ -10,10 +10,10 @@ package com.akpg.strings;
  * Input: Tact Coa
  * Output: True (permutations: "taco cat", "atco cta", etc.)
  */
-public class PalindromePermutation {
+public class _1_4_PalindromePermutation {
 
     public static void main(String[] args) {
-        PalindromePermutation testClass = new PalindromePermutation();
+        _1_4_PalindromePermutation testClass = new _1_4_PalindromePermutation();
 
         System.out.println(testClass.isPalindromePermutation("Tact Coa"));
         System.out.println(testClass.isPalindromePermutation("dad"));

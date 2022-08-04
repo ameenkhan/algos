@@ -1,15 +1,14 @@
 package com.akpg.strings;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 /**
  * Given two strings, write a method to decide if one is a permutation of the other
  */
-public class CheckPermutation {
+public class _1_2_CheckPermutation {
 
     public static void main(String[] args) {
-        CheckPermutation checkPermutation = new CheckPermutation();
+        _1_2_CheckPermutation checkPermutation = new _1_2_CheckPermutation();
 
         System.out.println(checkPermutation.isPermutation("", "s"));
         System.out.println(checkPermutation.isPermutation("dog", "odg"));

@@ -15,10 +15,10 @@ package com.akpg.strings;
  * pale, bale --> true
  * pale, bake --> false
  */
-public class OneAway {
+public class _1_5_OneAway {
 
     public static void main(String[] args) {
-        OneAway testClass = new OneAway();
+        _1_5_OneAway testClass = new _1_5_OneAway();
         System.out.println(testClass.oneAway("pale", "ple"));
         System.out.println(testClass.oneAway("pales", "pale"));
         System.out.println(testClass.oneAway("pale", "bale"));
