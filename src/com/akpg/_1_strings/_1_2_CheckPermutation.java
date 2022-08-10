@@ -1,4 +1,4 @@
-package com.akpg.strings;
+package com.akpg._1_strings;
 
 import java.util.Arrays;
 

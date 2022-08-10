@@ -1,4 +1,4 @@
-package com.akpg.strings;
+package com.akpg._1_strings;
 
 /**
  * Implement a method to perform basic string compression using the counts of repeated characters.

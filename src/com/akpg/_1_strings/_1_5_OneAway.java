@@ -1,4 +1,4 @@
-package com.akpg.strings;
+package com.akpg._1_strings;
 
 /**
  * There are three types of edits that can be performed on strings:
