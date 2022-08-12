@@ -31,6 +31,18 @@ public class SinglyLinkedList {
         return temp;
     }
 
+    // assume no duplicates in list (don't judge me this is a basic impl)
+    public Node getNode(int data) {
+        Node current = head;
+        while (current != null) {
+            if (current.data == data) {
+                return current;
+            }
+            current = current.next;
+        }
+        return current;
+    }
+
     public void insertLast(int data) {
         if (head == null) {
             head = new Node(data);
