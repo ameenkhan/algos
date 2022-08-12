@@ -46,7 +46,7 @@ public class SinglyLinkedList {
         current.next = newNode;
     }
 
-    public void printLinkedList() {
+    public String printLinkedList() {
         StringBuilder stringBuilder = new StringBuilder("[");
         Node current = head;
         while (current != null) {
@@ -58,7 +58,18 @@ public class SinglyLinkedList {
             current = current.next;
         }
         stringBuilder.append("]");
-        System.out.println(stringBuilder.toString());
+        return stringBuilder.toString();
+    }
+
+    /**
+     * Return a singly linked list's head, list looks like - [1, 2, 3, 2, 3, 4]
+     */
+    public static SinglyLinkedList createSampleLinkedList(int[] vals) {
+        SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
+        for (int v : vals) {
+            singlyLinkedList.insertLast(v);
+        }
+
+        return singlyLinkedList;
     }
 }
-
