@@ -33,8 +33,7 @@ public class _2_5_Sum_Lists {
 
     private Node sumListsForwardNoStack(Node node1, Node node2) {
         System.out.println("list 1: " + node1.printListFromNode() + " | list 2: " + node2.printListFromNode());
-        Node dummyNode = new Node();
-        Node dummyPtr = dummyNode;
+        Node head = new Node();
 
         int lenList1 = 0;
         int lenList2 = 0;
@@ -73,12 +72,36 @@ public class _2_5_Sum_Lists {
             //          node1 <- null
             // node1 <- node2 <- null
             Node newNode = new Node(sum);
-            dummyPtr.next = newNode;
-            dummyPtr = newNode;
+            newNode.next = head.next;
+            head.next = newNode;
+        }
+        System.out.println(head.next.printListFromNode());
+
+        ptr1 = head;
+        head = null;
+        int carry = 0;
+        int sum = 0;
+
+        // now we need to take care of the carry and reverse the input
+        // for example 10, 10, 9, 9 -> 0, 1, 0, 0, 1 -> 1, 0, 0, 1, 0
+        while (ptr1 != null) {
+            sum = ptr1.data + carry;
+            carry = sum / 10;
+
+            Node newNode = new Node(sum % 10);
+            newNode.next = head;
+            head = newNode;
+
+            ptr1 = ptr1.next;
         }
 
-        // TODO fix this
-        return dummyNode.next;
+        if (carry != 0) {
+            Node newNode = new Node(carry);
+            newNode.next = head;
+            head = newNode;
+        }
+
+        return head;
     }
 
     /**
