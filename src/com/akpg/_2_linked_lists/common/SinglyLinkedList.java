@@ -1,7 +1,7 @@
 package com.akpg._2_linked_lists.common;
 
 public class SinglyLinkedList {
-    public class Node {
+    public static class Node {
         public int data;
         public Node next;
 
@@ -13,6 +13,22 @@ public class SinglyLinkedList {
 
         public void displayNodeData() {
             System.out.println("{ " + data + " } ");
+        }
+
+        public String printListFromNode() {
+            Node ptr = this;
+            StringBuilder stringBuilder = new StringBuilder("[");
+
+            while (ptr != null) {
+                if (ptr.next == null) {
+                    stringBuilder.append(ptr.data);
+                } else {
+                    stringBuilder.append(ptr.data + ", ");
+                }
+                ptr = ptr.next;
+            }
+            stringBuilder.append("]");
+            return stringBuilder.toString();
         }
     }
 
