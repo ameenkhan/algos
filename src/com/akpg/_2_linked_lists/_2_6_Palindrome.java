@@ -65,11 +65,19 @@ public class _2_6_Palindrome {
      *
      */
     private boolean isPalindromeNoStack(SinglyLinkedList list) {
+        System.out.println(list.printLinkedList());
         ptr = list.head;
         return isPalindromeRecursive(list.head);
     }
 
     boolean isPalindromeRecursive(Node node) {
-        isPalindromeRecursive(node.next);
+        if (node == null) {
+            return true;
+        }
+
+        boolean isNextNodeEqual = isPalindromeRecursive(node.next);
+        boolean isThisNodeEqual = node.data == ptr.data;
+        ptr = ptr.next;
+        return isNextNodeEqual && isThisNodeEqual;
     }
 }
