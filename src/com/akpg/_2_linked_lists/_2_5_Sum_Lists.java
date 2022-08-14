@@ -31,6 +31,16 @@ public class _2_5_Sum_Lists {
         System.out.println(sum.printListFromNode());
     }
 
+    /**
+     * Find the lengths of each list. Then add each respective unit without any carries. For example
+     *   9443
+     * +  567
+     * = 9,9,10,10 <-- head
+     *
+     * Now use the carry and normalize the list similar to the reversed approach
+     *
+     * 1 0 0 1 0
+     */
     private Node sumListsForwardNoStack(Node node1, Node node2) {
         System.out.println("list 1: " + node1.printListFromNode() + " | list 2: " + node2.printListFromNode());
         Node head = new Node();
